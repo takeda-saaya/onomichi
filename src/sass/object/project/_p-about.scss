@@ -1,0 +1,268 @@
+@use "global" as *;
+
+.p-about {
+  position: relative;
+  overflow: hidden;
+}
+
+.p-about__inner {
+  position: relative;
+  max-width: rem(335);
+  padding: 0;
+  @include mq("md") {
+    max-width: rem(848);
+  }
+}
+
+.p-about__inner::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translatex(-50%);
+  width: rem(100);
+  height: rem(36);
+  background-image: url(.././images/common/about-arrow.png);
+  background-size: contain;
+  content: "";
+  @include mq("md") {
+    width: rem(140);
+    height: rem(50);
+  }
+}
+
+.p-about__content {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border-radius: rem(24);
+  background-color: $white;
+  padding: rem(40) 0;
+}
+
+.p-about__heading::before {
+  background-image: url(.././images/common/about-icon.png);
+}
+
+.p-about__imgs {
+  position: relative;
+}
+
+.p-about__img1,
+.p-about__img2 {
+  position: absolute;
+  width: 100%;
+  max-width: rem(87);
+  aspect-ratio: 87/70;
+  img {
+    object-fit: contain;
+    height: 100%;
+  }
+  @include mq("md") {
+    max-width: rem(134);
+  }
+}
+
+.p-about__img1 {
+  top: rem(-114);
+  right: calc(50% + rem(48));
+  @include mq("md") {
+    top: rem(-131);
+    right: calc(50% + rem(192));
+  }
+}
+
+.p-about__img2 {
+  top: rem(-115);
+  left: calc(50% + rem(60));
+  @include mq("md") {
+    top: rem(-121);
+    left: calc(50% + rem(197));
+  }
+}
+
+.p-about__sub-heading {
+  font-size: rem(14);
+  font-weight: $bold;
+  margin-top: rem(24);
+  @include mq("md") {
+    font-size: rem(16);
+    margin-top: rem(37);
+  }
+}
+
+.p-about__texts {
+  font-size: rem(12);
+  font-weight: 400;
+  margin-top: rem(24);
+  @include mq("md") {
+    font-size: rem(16);
+    margin-top: rem(33);
+  }
+}
+
+.p-about__text:nth-child(n + 2) {
+  margin-top: rem(18);
+  @include mq("md") {
+    margin-top: rem(29);
+  }
+}
+
+.p-about__text span {
+  font-weight: $bold;
+}
+
+.p-about__present {
+  font-size: rem(14);
+  font-weight: $bold;
+  padding-bottom: rem(6);
+  border-bottom: 2px dotted $blue2;
+  margin-top: rem(32);
+  @include mq("md") {
+    margin-top: rem(37);
+    font-size: rem(20);
+    padding-bottom: rem(12);
+  }
+}
+
+.p-about__btn {
+  margin-top: rem(24);
+  @include mq("md") {
+    margin-top: rem(32);
+  }
+}
+
+.p-about__decoration {
+  position: absolute;
+}
+
+.p-about__decoration img {
+  height: 100%;
+}
+
+.p-about__picture {
+  bottom: rem(61);
+  left: auto;
+  width: 100%;
+  max-width: rem(138);
+  aspect-ratio: 138/215;
+  @include mq("md") {
+    max-width: vw(1440, 427);
+    bottom: rem(161);
+  }
+}
+
+.p-about__decoration1 {
+  bottom: rem(158);
+  left: 50%;
+  width: 100%;
+  max-width: rem(133);
+  aspect-ratio: 133/65;
+  @include mq("md") {
+    bottom: rem(389);
+    left: calc(50% + rem(376));
+    max-width: rem(308);
+    aspect-ratio: 308/150;
+  }
+}
+
+.p-about__decoration2 {
+  left: calc(50% + rem(120));
+  bottom: rem(220);
+  width: 100%;
+  max-width: rem(48);
+  aspect-ratio: 1/1;
+  @include mq("md") {
+    left: calc(50% + rem(505));
+    bottom: rem(597);
+    max-width: rem(101);
+  }
+}
+
+.p-about__decoration3 {
+  top: rem(22);
+  left: calc(50% + rem(133));
+  max-width: rem(54);
+  width: 100%;
+  aspect-ratio: 54/120;
+  @include mq("md") {
+    top: rem(44);
+    left: calc(50% + rem(490));
+    max-width: rem(100);
+  }
+}
+
+.p-about__decoration4 {
+  top: rem(17);
+  right: calc(50% + rem(527));
+  width: 100%;
+  max-width: rem(250);
+  aspect-ratio: 1/1;
+}
+
+.p-about__decoration5 {
+  bottom: rem(634);
+  left: calc(50% + rem(448));
+  width: 100%;
+  max-width: rem(873);
+  aspect-ratio: 873/45;
+  z-index: -5;
+  @include mq("md") {
+    bottom: rem(645);
+  }
+}
+
+.p-about__decoration-left img,
+.p-about__decoration-right img {
+  border-radius: 24px;
+  @include mq("md") {
+    border-radius: 40px;
+  }
+}
+
+.p-about__decoration-left,
+.p-about__decoration-right {
+  width: 100%;
+  max-width: rem(200);
+  aspect-ratio: 1/1;
+  @include mq("md") {
+    max-width: rem(480);
+  }
+}
+
+.p-about__decoration-left {
+  top: rem(428);
+  right: calc(50% + rem(128));
+  @include mq("md") {
+    top: rem(110);
+    right: calc(50% + rem(614));
+  }
+}
+
+.p-about__decoration-right {
+  top: rem(305);
+  left: calc(50% + rem(128));
+  @include mq("md") {
+    top: rem(109);
+    left: calc(50% + rem(560));
+  }
+}
+
+.p-about__bottom {
+  margin-top: rem(139);
+  @include mq("md") {
+    margin-top: rem(167);
+  }
+}
+
+.p-about__logo {
+  width: 100%;
+  max-width: rem(354);
+  margin-inline: auto;
+  @include mq("md") {
+    max-width: rem(891);
+  }
+}
+
+.p-about__logo img {
+  height: 100%;
+}

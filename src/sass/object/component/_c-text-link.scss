@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.p-text-link {
+  display: inline-block;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  @include mq("md") {
+    text-underline-offset: 4px;
+  }
+}
+
+.p-text-link:hover {
+  text-decoration-color: $blue2;
+  color: $blue2;
+}

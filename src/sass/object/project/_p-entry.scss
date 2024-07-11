@@ -1,0 +1,122 @@
+@use "global" as *;
+
+.p-entry {
+  overflow: hidden;
+  @include mq("md") {
+    padding-top: rem(120);
+  }
+}
+
+.p-entry__inner {
+  position: relative;
+  padding-bottom: rem(2);
+  @include mq("md") {
+    padding-bottom: rem(6);
+  }
+}
+
+.p-entry__heading::before {
+  background-image:  url(.././images/common/entry-icon.png);
+}
+
+.p-entry__items {
+  display: grid;
+  gap: rem(50);
+  margin-top: rem(32);
+  @include mq("md") {
+    grid-auto-flow: column;
+    gap: rem(35);
+    margin-top: rem(29);
+  }
+}
+
+.p-entry__btn {
+  margin-top: rem(14);
+  text-align: center;
+  @include mq("md") {
+    margin-top: rem(69);
+  }
+}
+
+.p-entry__decoration {
+  position: absolute;
+  z-index: -6;
+  img {
+    height: 100%;
+  }
+}
+
+.p-entry__decoration1,
+.p-entry__decoration2,
+.p-entry__decoration3 {
+  width: 100%;
+  max-width: rem(55);
+  aspect-ratio: 55/120;
+  @include mq("md") {
+    max-width: rem(100);
+  }
+}
+
+.p-entry__decoration1 {
+  top: rem(74);
+  left: calc(50% + rem(115));
+  @include mq("md") {
+    top: rem(150);
+    left: calc(50% + rem(620));
+  }
+}
+
+.p-entry__decoration2 {
+  top: rem(549);
+  right: calc(50% + rem(115));
+  @include mq("md") {
+    top: rem(576);
+    right: calc(50% + rem(620));
+  }
+}
+
+.p-entry__decoration3 {
+  bottom: rem(368);
+  left: calc(50% + rem(115));
+  @include mq("md") {
+  }
+}
+
+.p-entry__decoration4 {
+  top: 0;
+  right: calc(50% + rem(36));
+  width: 100%;
+  max-width: rem(149);
+  aspect-ratio: 149/223;
+  @include mq("md") {
+    top: rem(-63);
+    right: calc(50% + rem(300));
+    max-width: rem(420);
+  }
+}
+
+.p-entry__decoration5 {
+  top: 0;
+  left: calc(50% + rem(60));
+  width: 100%;
+  max-width: rem(105);
+  aspect-ratio: 105/63;
+  @include mq("md") {
+    top: rem(-26);
+    left: calc(50% + rem(287));
+    max-width: rem(238);
+  }
+}
+
+.p-entry__decoration6 {
+  top: rem(2);
+  left: calc(50% + rem(123));
+  width: 100%;
+  max-width: rem(94);
+  aspect-ratio: 94/80;
+  @include mq("md") {
+    top: rem(-19);
+    left: calc(50% + rem(437));
+    max-width: rem(214);
+  }
+}

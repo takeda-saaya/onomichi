@@ -1,0 +1,111 @@
+@use "global" as *;
+
+.p-footer {
+  @include mq("md") {
+    position: relative;
+  }
+}
+
+.p-footer::before {
+  @include mq("md") {
+    position: absolute;
+    top: rem(90);
+    right: 0;
+    background-image: url(.././images/common/p-footer__decoration2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: rem(100);
+    aspect-ratio: 100/200;
+    content: "";
+  }
+  @include mq("xl") {
+    left: calc(50% + rem(580));
+    top: rem(-41);
+  }
+}
+
+.p-footer__sns-link {
+  text-align: center;
+}
+
+.p-footer__sns-text {
+  font-family: "Josefin Sans";
+  font-size: rem(20);
+  line-height: 1.25;
+  @include mq("md") {
+    font-size: rem(24);
+  }
+}
+
+.p-footer__sns-icons {
+  display: grid;
+  grid-auto-flow: column;
+  gap: rem(40);
+  place-content: center;
+  margin-top: rem(23);
+}
+
+.p-footer__sns-icon {
+  width: 100%;
+  max-width: rem(32);
+  aspect-ratio: 1/1;
+  @include mq("md") {
+    max-width: rem(40);
+  }
+}
+
+.p-footer__sns-icon img {
+  height: auto;
+}
+
+.p-footer__decoration1 {
+  width: 100%;
+  max-width: rem(333);
+  aspect-ratio: 333/55;
+  margin-top: rem(11);
+  margin-inline: auto;
+  @include mq("md") {
+    max-width: rem(755);
+    aspect-ratio: 775/125;
+    margin-top: rem(30);
+  }
+}
+
+.p-footer__decoration1 img {
+  height: auto;
+}
+
+.p-footer__address {
+  margin-top: rem(-16);
+  @include mq("md") {
+    margin-top: 0;
+    margin-top: rem(-35);
+  }
+}
+
+.p-footer__bottom {
+  color: $white;
+  font-size: rem(10);
+  text-align: center;
+  margin-top: rem(24);
+  padding-top: rem(45);
+  background-image: url(.././images/common/wave__sp.png);
+  background-size: rem(96) rem(45);
+  background-position: left rem(-6) center;
+  background-repeat: repeat-x;
+  @include mq(md) {
+    background-image: url(.././images/common/wave__pc.png);
+    font-size: rem(14);
+    margin-top: rem(120);
+    padding-top: rem(120);
+    background-size: rem(252) 100%;
+  }
+}
+
+.p-footer__copy {
+  padding-bottom: rem(24);
+  background-color: $blue1;
+  @include mq("md") {
+    padding-bottom: rem(32);
+  }
+}

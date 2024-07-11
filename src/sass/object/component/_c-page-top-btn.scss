@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.c-page-top-btn {
+  width: rem(75);
+  z-index: 10000;
+  margin-top: rem(26);
+  margin-inline: auto;
+  @include mq("md") {
+    position: fixed;
+    bottom: rem(16);
+    width: min(calc(100 / 375 * 100%), rem(100));
+    right: rem(40);
+  }
+}
+
+.c-page-top-btn:hover {
+  opacity: 1;
+  filter: brightness(0.9);
+}

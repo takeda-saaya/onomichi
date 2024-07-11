@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.p-sp-nav {
+  width: 100%;
+  background-color: $white;
+  transform: translatey(-100%);
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-sp-nav__items {
+  padding: rem(62) 0 rem(82);
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  height: 100dvh;
+  overflow: auto;
+}
+
+.p-sp-nav__item:not(:last-child) a {
+  padding-top: rem(20);
+  padding-bottom: rem(20);
+  text-align: center;
+  font-size: rem(14);
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+}
+
+.p-sp-nav__item:hover:not(:last-child) a {
+  color: $blue2;
+  text-decoration: underline $blue2;
+}
+
+body.is-open {
+  overflow: hidden;
+  .p-sp-nav {
+    transform: translatey(0px);
+  }
+}
+
+.p-sp__btn {
+  padding-top: 20px;
+  text-align: center;
+}

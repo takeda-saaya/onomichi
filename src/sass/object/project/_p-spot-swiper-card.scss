@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.p-spot-card {
+  height: 100%;
+  background-color: $white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+
+  @include mq("lg") {
+    border-radius: 24px;
+  }
+}
+
+.p-spot-card__img {
+  aspect-ratio: 240/180;
+  @include mq("md") {
+    aspect-ratio: 344/240;
+  }
+}
+
+.p-spot-card__img,
+.p-spot-card__img img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
+  @include mq("lg") {
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+}
+
+.p-spot-card__img img {
+  height: 100%;
+}
+
+.p-spot-card__body {
+  flex: 1;
+  padding: 0 rem(22) rem(30);
+  margin-top: rem(22);
+  @include mq("lg") {
+    padding: 0 rem(24) rem(40);
+  }
+}
+
+.p-spot-card__title {
+  text-align: center;
+  font-weight: $bold;
+  @include mq("lg") {
+    font-size: rem(20);
+  }
+}
+
+.p-spot-card__text {
+  font-size: rem(12);
+  line-height: 1.6;
+  margin-top: rem(16);
+  @include mq("lg") {
+    font-size: rem(16);
+    margin-top: rem(24);
+  }
+}

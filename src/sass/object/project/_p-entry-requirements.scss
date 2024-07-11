@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.p-entry-requirements__body {
+  border: 8px solid $white;
+  background: $gray;
+  padding: rem(15);
+  @include mq("md") {
+    padding: rem(36) rem(55);
+  }
+}
+
+.p-entry-requirements__heading::before {
+  background-image: url(.././images/common/entry-requirements-icon.png);
+}
+
+.p-entry-requirements__lists {
+  display: grid;
+  gap: rem(11);
+  margin-top: rem(24);
+  @include mq("md") {
+    margin-top: rem(40);
+    gap: rem(5);
+  }
+}
+
+.p-entry-requirements__picture {
+  margin-top: rem(27);
+  @include mq("md") {
+    margin-top: rem(120);
+  }
+}
+
+.p-entry-requirements__picture img {
+  aspect-ratio: 375/99;
+  @include mq("md") {
+    aspect-ratio: 1512/400;
+  }
+}

@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.c-hamburger {
+  width: inherit;
+  height: inherit;
+  padding: 0;
+  transition: none;
+}
+
+.c-hamburger__menu {
+  width: inherit;
+  height: inherit;
+  aspect-ratio: 32/24;
+}
+
+.c-hamburger__menu img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.c-hamburger[aria-expanded="true"] {
+  position: relative;
+  background-image: url(.././images/common/close-icon.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-hamburger[aria-expanded="true"] .c-hamburger__menu {
+  opacity: 0;
+}

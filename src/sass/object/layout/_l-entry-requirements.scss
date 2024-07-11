@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.l-entry-requirements {
+  margin-top: rem(30);
+  @include mq("md") {
+    margin-top: rem(120);
+  }
+}

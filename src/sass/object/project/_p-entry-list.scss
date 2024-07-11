@@ -1,0 +1,84 @@
+@use "global" as *;
+
+.p-entry-list {
+  padding-bottom: rem(14);
+  border-bottom: 1px solid var(--LP-Dark-Gray, #ccc);
+  @include mq("md") {
+    display: flex;
+    padding-bottom: rem(9);
+    gap: rem(10);
+  }
+}
+
+.p-entry-list__titile {
+  position: relative;
+  font-size: rem(14);
+  font-weight: $bold;
+  padding-left: rem(16);
+  @include mq("md") {
+    width: rem(230);
+    font-size: rem(16);
+    padding-left: rem(32);
+  }
+}
+
+.p-entry-list__titile::before {
+  position: absolute;
+  bottom: calc(100% - 14px);
+  left: 0;
+  width: rem(8);
+  height: rem(8);
+  border-radius: 50%;
+  background-color: $blue2;
+  content: "";
+  @include mq("md") {
+    left: rem(16);
+    bottom: calc(100% - 16px);
+  }
+}
+
+.p-entry-list__text {
+  font-size: rem(12);
+  margin-top: rem(9);
+  @include mq("md") {
+    font-size: rem(16);
+    width: calc(100% - rem(240));
+    flex-grow: 1;
+  }
+}
+
+.p-entry-list__texts {
+  margin-top: rem(10);
+  @include mq("md") {
+    width: calc(100% - rem(240));
+  }
+}
+
+.p-entry-list__texts .p-entry-list__text {
+  margin-top: 0;
+}
+
+.p-entry-list__text-decoration {
+  position: relative;
+  padding-left: rem(18);
+  @include mq("md") {
+    width: 100%;
+  }
+}
+
+.p-entry-list__text-decoration::before {
+  position: absolute;
+  top: rem(8);
+  left: rem(8);
+  border-radius: 50%;
+  background-color: $black;
+  width: rem(2);
+  height: rem(2);
+  content: "";
+  @include mq("md") {
+    width: rem(3);
+    height: rem(3);
+    top: rem(11);
+    left: rem(7);
+  }
+}

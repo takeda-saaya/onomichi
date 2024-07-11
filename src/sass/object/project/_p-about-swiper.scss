@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.p-about-swiper {
+  @include mq("md") {
+    margin-top: rem(-10);
+  }
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.p-about-slide {
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: rem(100);
+  height: 100%;
+  aspect-ratio: 1/1;
+  margin-left: rem(10);
+  @include mq("md") {
+    max-width: rem(200);
+    margin-left: rem(20);
+    border-radius: 22px;
+  }
+}
+
+.p-about-slide img{
+  height: 100%;
+}

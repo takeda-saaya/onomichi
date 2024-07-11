@@ -1,0 +1,21 @@
+@use "global" as *;
+
+/* 非表示設定 */
+//768px以上を表示
+.hidden-sp {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+//モバイルのみ表示
+.hidden-pc {
+  display: block;
+  @include mq("md") {
+    display: none;
+  }
+}
+
+
+

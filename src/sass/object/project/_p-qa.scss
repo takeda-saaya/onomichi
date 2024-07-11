@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.p-qa-heading::before {
+  background-image: url(.././images/common/qa-icon.png);
+}
+
+.p-qa__boxs {
+  display: grid;
+  gap: rem(12);
+  margin-top: rem(24);
+  @include mq("md") {
+    gap: rem(24);
+    margin-top: rem(40);
+  }
+}

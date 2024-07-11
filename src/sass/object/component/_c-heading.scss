@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.c-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(6);
+  line-height: 1.25;
+  @include mq("md") {
+    gap: rem(8);
+  }
+}
+
+.c-heading::before {
+  content: "";
+  width: rem(37.3);
+  height: rem(37.3);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include mq("md") {
+    width: rem(48);
+    height: rem(48);
+  }
+}

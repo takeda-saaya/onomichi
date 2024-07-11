@@ -1,0 +1,173 @@
+@use "global" as *;
+
+/* リセットCSS
+---------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+// adobe fonts読み込み対策
+// html {
+//   visibility: hidden;
+// }
+// html.wf-active,
+// html.loading-delay {
+//   visibility: visible;
+// }
+
+/* スムーススクロール */
+// html {
+//   scroll-behavior: smooth;
+// }
+// :target {
+//   scroll-margin-top: 60px;
+// }
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  // text-rendering: optimizeSpeed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $normal;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+video {
+  height: auto;
+  border: none;
+}
+
+strong,
+span {
+  color: inherit;
+}
+
+a,
+img,
+dl,
+dt,
+dd,
+article,
+aside,
+details,
+figcaption,
+figure,
+picture,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+label,
+input,
+textarea,
+button {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* フォームリセット */
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+input[type="submit"],
+input[type="button"],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/* CSS
+---------------------------------------------------------------------------- */

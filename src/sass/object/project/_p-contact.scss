@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.p-contact {
+  padding: rem(40) 0 rem(44) 0;
+  background-color: $white;
+  @include mq("md") {
+    padding: rem(120) 0 rem(103) 0;
+  }
+}
+
+.p-contact__inner {
+  @include mq("md") {
+    max-width: calc(rem(848) + rem(30) * 2);
+  }
+}
+
+.p-contact__heading::before {
+  background-image: url(.././images/common/contact-icon.png);
+}
+
+.p-contact__sub-heading {
+  text-align: center;
+  font-size: rem(12);
+  margin-top: rem(24);
+  @include mq("md") {
+    font-size: rem(16);
+    margin-top: rem(40);
+  }
+}
+
+.p-contact__contents {
+  margin-top: rem(24);
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.p-contact__btn {
+  text-align: center;
+  margin-top: rem(24);
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}

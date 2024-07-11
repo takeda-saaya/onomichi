@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.c-btn {
+  display: inline-block;
+  text-align: center;
+  background-color: $white;
+  color: $black;
+  border: rem(1) solid currentColor;
+  padding: rem(6) rem(23);
+  border-radius: rem(40);
+  border: rem(2) solid #4a3636;
+  box-shadow: 0 rem(4) 0 0 #4a3636;
+  font-weight: $bold;
+  @include mq(md) {
+    font-size: rem(20);
+    padding: rem(12) rem(41);
+    border: rem(3) solid currentColor;
+  }
+}
+
+.c-btn--small {
+  font-size: rem(14);
+  padding: rem(2) rem(22) rem(4);
+  @include mq("md") {
+    font-size: rem(16);
+    padding: rem(4) rem(22) rem(6);
+  }
+}
+
+.c-btn--submit {
+  @include mq("md") {
+    width: 240px;
+    padding: rem(4) 0 rem(6);
+    font-size: rem(16);
+    border-width: 2px;
+  }
+}
+
+.c-btn:hover,
+.c-btn--small:hover,
+.c-btn--submit:hover {
+  background-color: #ffee56;
+}

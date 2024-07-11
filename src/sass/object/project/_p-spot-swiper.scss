@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.p-spot-swiper {
+  margin-top: rem(24);
+  @include mq("lg") {
+    position: relative;
+    margin-top: 0;
+    margin-left: rem(40);
+  }
+}
+
+.swiper .swiper-slide {
+  height: auto;
+}
+
+.swiper .p-spot-card {
+  height: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @include mq("md") {
+    position: absolute;
+    width: rem(80);
+    height: rem(80);
+    top: 97%;
+  }
+  @include mq("lg") {
+    top: 95%;
+  }
+}
+
+.swiper-button-prev {
+  @include mq("md") {
+    left: 6%;
+  }
+  @include mq("lg") {
+    left: 3%;
+  }
+}
+
+.swiper-button-next {
+  @include mq("md") {
+    right: 13%;
+  }
+  @include mq("lg") {
+    right: 22%;
+  }
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+  display: none;
+  @include mq("lg") {
+    display: block;
+    position: static;
+    width: 80px;
+    height: 80px;
+    background-color: #ffee56;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 27px;
+    border-radius: 50%;
+  }
+}
+
+.swiper-button-prev:after {
+  @include mq("lg") {
+    background-image: url(.././images/common/swiper-button-left.png);
+  }
+}
+
+.swiper-button-next:after {
+  @include mq("lg") {
+    background-image: url(.././images/common/swiper-button-right.png);
+  }
+}
+
+.p-swiper-about-apagination {
+  display: none;
+}

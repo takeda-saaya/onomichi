@@ -1,0 +1,241 @@
+@use "global" as *;
+
+.p-prizes-card {
+  position: relative;
+  width: calc(50% - rem(7.5));
+  padding: 0;
+  z-index: 1;
+}
+
+.p-prizes-card:nth-of-type(n + 3) {
+  @include mq("md") {
+    width: calc((100% - (rem(36) * 2)) / 3);
+  }
+}
+
+.p-prizes-card:nth-of-type(n + 4) {
+  @include mq("md") {
+    margin-left: rem(36);
+  }
+}
+
+.p-prizes-card-large .p-prizes-card__icon {
+  @include mq("md") {
+    width: rem(100);
+    height: rem(100);
+  }
+}
+
+.p-prizes-card::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid transparent;
+  border-radius: 8px;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+  @include mq("md") {
+    border-radius: 24px;
+  }
+}
+
+.p-prizes-card::after {
+  position: absolute;
+  background-image: url();
+  content: "";
+  bottom: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  @include mq("md") {
+  }
+}
+
+.p-prizes-card__icon svg .background {
+  transition: fill 0.3s ease-in-out;
+}
+
+.p-prizes-card:hover {
+  opacity: 1;
+}
+
+.p-prizes-card:hover .p-prizes-card__icon svg .background {
+  fill: #9ed0e0;
+}
+
+.p-prizes-card:hover::before {
+  border-color: $blue2;
+}
+
+.p-prizes-card__namber {
+  position: absolute;
+  top: -12%;
+  left: 50%;
+  transform: translatex(-50%);
+  z-index: 5;
+  width: 100%;
+  max-width: rem(48);
+  @include mq("md") {
+    max-width: rem(80);
+  }
+}
+
+.p-prizes-card__namber img {
+  object-fit: contain;
+  height: 100%;
+}
+
+.p-prizes-card-large .p-prizes-card__namber img {
+  @include mq("md") {
+    max-width: rem(100);
+  }
+}
+
+.p-prizes-card__body {
+  position: relative;
+}
+
+.p-prizes-card__icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: rem(36);
+  height: rem(36);
+  aspect-ratio: 1/1;
+  border-bottom-right-radius: 8px;
+  z-index: 2;
+  transition: 0.3s all;
+  fill: currentColor;
+  @include mq("md") {
+    border-bottom-right-radius: 24px;
+    width: rem(64);
+    height: rem(64);
+  }
+}
+
+.p-prizes-card__name {
+  position: absolute;
+  top: rem(-18);
+  left: 50%;
+  transform: translatex(-50%);
+  color: $white;
+  text-align: center;
+  font-size: rem(7.68);
+  font-weight: $bold;
+  z-index: 5;
+  @include mq("md") {
+    font-size: rem(16);
+    top: rem(-38);
+  }
+}
+
+.p-prizes-card__img {
+  width: 100%;
+  aspect-ratio: 160/140;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  @include mq("md") {
+    max-width: rem(280);
+    aspect-ratio: 280/240;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+}
+
+.p-prizes-card-large .p-prizes-card__img {
+  @include mq("md") {
+    max-width: rem(440);
+    aspect-ratio: 440/340;
+  }
+}
+
+.p-prizes-card__img img {
+  height: 100%;
+  transition: transform 0.6s ease;
+  object-position: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  @include mq("md") {
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+}
+
+.p-prizes-card:hover .p-prizes-card__img img {
+  transform: scale(1.2);
+}
+
+.p-prizes-card__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(12);
+  font-weight: $bold;
+  min-height: rem(56);
+  padding: rem(9) rem(9);
+  background-color: $gray;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  @include mq("md") {
+    min-height: rem(81);
+    font-size: rem(16);
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+}
+
+.p-prizes-card-large .p-prizes-card__text {
+  @include mq("md") {
+    min-height: rem(120);
+    font-size: rem(20);
+  }
+}
+
+.p-prizes-card-large {
+  @include mq("md") {
+    width: calc(50% - rem(16));
+  }
+}
+
+.p-prizes-card-large:nth-of-type(2) {
+  @include mq("md") {
+    margin-left: rem(32);
+  }
+}
+
+.p-prizes-card__icon svg:nth-child(1) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  max-width: rem(36);
+  height: auto;
+  border-bottom-right-radius: 8px;
+  @include mq("md") {
+    max-width: rem(100);
+    border-bottom-right-radius: 24px;
+  }
+}
+
+.p-prizes-card__icon svg:nth-child(2) {
+  position: absolute;
+  bottom: rem(5);
+  right: rem(5);
+  width: 100%;
+  max-width: rem(11);
+  height: auto;
+  @include mq("md") {
+    bottom: rem(12);
+    right: rem(12);
+    max-width: rem(32);
+  }
+}
