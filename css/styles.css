@@ -1670,19 +1670,19 @@ select::-ms-expand {
   margin-top: 1.4375rem;
 }
 
-.p-footer__sns-icon {
+.p-footer__sns-icon a {
   width: 100%;
   max-width: 32px;
   max-width: 2rem;
   aspect-ratio: 1/1;
 }
 @media screen and (min-width: 768px) {
-  .p-footer__sns-icon {
+  .p-footer__sns-icon a {
     max-width: 2.5rem;
   }
 }
 
-.p-footer__sns-icon img {
+.p-footer__sns-icon a img {
   height: auto;
 }
 
